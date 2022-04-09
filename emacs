@@ -37,4 +37,5 @@
 
 ; Set header to 80 characters
 (setq-default header-line-format
-              (list " " (make-string 79 ?-) "|")
+              (list " " (make-string 79 ?-) "|"))
+
