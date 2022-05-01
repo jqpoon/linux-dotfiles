@@ -35,7 +35,11 @@
 (global-display-line-numbers-mode)
 (setq column-number-mode t)
 
-; Set header to 80 characters
+; Set header to 80 characters but disable for shells
 (setq-default header-line-format
-              (list " " (make-string 79 ?-) "|"))
+              (list "   " (make-string 79 ?-) "|"))
+(add-hook 'shell-mode-hook
+          (lambda() (setq header-line-format nil)))
 
+; Disable menubar
+(menu-bar-mode -1)
