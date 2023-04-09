@@ -1,0 +1,2 @@
+# Run emacs without creating backup files
+emacs -nw --eval "(set (make-local-variable 'backup-inhibited) t) (auto-save-mode -1)"
